@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.groupten.employ.dao.PolicyDao">
+
+    <select id="selectAll" resultType="Policy">
+        select * from policy
+    </select>
+
+    <select id="selectOne" parameterType="int" resultType="Policy">
+        select * from policy where poli_id = #{poli_id}
+    </select>
+
+    <select id="insertOne" parameterType="Policy">
+        insert into policy (poli_content,title,author,poli_post_time) values
+        (#{poli_content},#{title},#{author},now())
+    </select>
+
+</mapper>

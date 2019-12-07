@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.groupten.employ.dao.CompanyDao">
+    <select id="authenticateCompany" resultType="Integer">
+        select com_id
+        from company
+        where username = #{com_username}
+          and password = #{com_password}
+          and role = #{com_role}
+    </select>
+
+</mapper>

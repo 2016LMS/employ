@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--关于Graduate表的映射文件-->
+<mapper namespace="com.groupten.employ.dao.GraduateDao">
+    <select id="authenticateGraduate" resultType="Integer">
+        select gra_id
+        from graduate
+        where username = #{gra_username}
+          and password = #{gra_password}
+          and role = #{role}
+    </select>
+
+</mapper>

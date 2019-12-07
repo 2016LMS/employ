@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.groupten.employ.dao.RecruitmentDao">
+
+    <resultMap id="selectRACByPageMap" type="com.groupten.employ.vo.RecruitAndCompany">
+        <association property="recruitment" javaType="Recruitment">
+            <id property="recruit_id" column="recruit_id"></id>
+            <result property="com_id" column="com_id"></result>
+            <result property="recruit_name" column="recruit_name"></result>
+            <result property="recruit_treat" column="recruit_treat"></result>
+            <result property="recruit_position" column="recruit_position"></result>
+            <result property="recruit_content" column="recruit_content"></result>
+            <result property="is_recruit_active" column="is_recruit_active"></result>
+            <result property="apply_count" column="apply_count"></result>
+        </association>
+
+        <association property="company" javaType="Company">
+            <id property="com_id" column="com_id"></id>
+            <result property="com_name" column="com_name"></result>
+            <result property="com_position" column="com_position"></result>
+            <result property="com_intro" column="com_intro"></result>
+            <result property="com_leader" column="com_leader"></result>
+            <!--<result property="com_img" column="com_img"></result>-->
+            <!--<result property="username" column="username"></result>-->
+            <!--<result property="password" column="password"></result>-->
+        </association>
+
+    </resultMap>
+
+    <update id="updateRecruitment" parameterType="Recruitment">
+        insert into recruitment  (recruit_name,recruit_requires,recruit_treat,com_id,recruit_position,recruit_content)
+        values
+        (#{recruit_name},#{recruit_requires},#{recruit_treat},1,#{recruit_position},#{recruit_content})
+    </update>
+
+    <select id="totalCount" resultType="int">
+        select count(*) from recruitment;
+    </select>
+
+    <select id="getApply_count" resultType="int" parameterType="int">
+        select count(*) from apply where recruit_id=#{recruit_id}
+    </select>
+
+    <select id="selectRecruitmentByPage" parameterType="com.groupten.employ.utility.Page" resultType="Recruitment">
+        select * from recruitment limit #{pageIndex},#{pageSize}
+    </select>
+
+    <select id="selectOneRecruit_gra" parameterType="int" resultType="Recruitment">
+        select * from recruitment where recruit_id = #{recruit_id}
+    </select>
+
+    <select id="selectRACByPage" parameterType="com.groupten.employ.utility.Page" resultMap="selectRACByPageMap">
+        select * from recruitment a join company b on a.com_id=b.com_id limit #{pageIndex},#{pageSize}
+    </select>
+    <select id="selectComById" parameterType="int" resultType="Company">
+        select * from company where com_id=#{com_id}
+    </select>
+</mapper>

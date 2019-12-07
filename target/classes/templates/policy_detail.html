@@ -1,0 +1,287 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>推荐详情</title>
+    <meta name="description" content="graduates">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../static/img/logo/graduate.svg" th:href="@{/img/graduate.svg}">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="../static/css/animate.min.css" th:href="@{/css/animate.min.css}">
+    <link rel="stylesheet" href="../static/css/elegant-icon.css" th:href="@{/css/elegant-icon.css}">
+    <link rel="stylesheet" href="../static/css/flaticon.css" th:href="@{/css/flaticon.css}">
+    <link rel="stylesheet" href="../static/css/default.css" th:href="@{/css/default.css}">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+<!-- preloader -->
+<div id="preloader">
+    <div class="preloader">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- preloader end  -->
+
+<!-- header -->
+<header>
+    <div class="header-top d-none d-md-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="header-contact text-center text-lg-left">
+                        <ul>
+                            <li><i class="icon_phone"></i> +111 2222 444</li>
+                            <li><i class="icon_mail_alt"></i> example@gmail.com</li>
+                            <li><i class="icon_pin_alt"></i> ChengDu University CHN</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="col-lg-4 d-none d-lg-block">-->
+                <!--<div class="header-contact" style="color: white" th:text="${session.user.name}">-->
+                <!--<span>未登录</span>-->
+                <!--<span th:if="${session.user.name}"><i class="icon_cursor"></i>退出</span>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <div id="header-sticky" class="menu-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="m-3">
+                        <div class="col-md-6 text-md-center p-2" style="background:#13404d;border-radius: 6px;color: white">
+                            <img src="../static/img/logo/graduate2.svg" alt="Logo" style="width: 30px;" th:src="@{/img/logo/graduate2.svg}">
+                            毕业生管理
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="main-menu text-right">
+                        <nav id="mobile-menu">
+                            <ul>
+                                <li><a href="index_graduate.html" th:href="@{/index_gra}">Home</a></li>
+                                <li><a href="../static/about.html">About Us</a></li>
+                                <li><a href="../static/about.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!--<div class="col-12">-->
+                <!--<div class="mobile-menu"></div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header-end -->
+
+<!--中间内容-->
+<div class="container bg-light">
+    <div class="m-3">
+        <div class="col-md-2 text-md-center p-1 border-bottom" style="font-size: 30px">政策详情</div>
+    </div>
+    <div class="container">
+        <div class="text-center">
+            <p class="h4" th:text="${po.title}">四川省教育厅关于联合开展公共招聘进校园活动的通知</p>
+            <div class="text-right pb-5">
+                <div class="m-2" style="display: inline;font-family:'Axure Handwriting';color: #ffab53;" th:text="${po.author}">四川省人力资源和社会保障厅</div>
+                <div class="m-2" style="display: inline;color: #4e555b;font-family:'Axure Handwriting'" th:text="${po.poli_post_time}">2019/9/12</div>
+            </div>
+        </div>
+
+        <div class="container"style="padding-left:220px; ">
+
+                <pre th:text="${po.poli_content}">
+
+
+各市（州）人力资源和社会保障局、各高校：
+
+    为大力促进我省高校2017届毕业生就业，全省将统一开展“公共招聘进校园”活动。现将有关事项通知如下：
+
+一、活动主题
+
+    多方联动精准发力促就业。
+
+二、组织领导
+
+（一）主办单位：省人力资源和社会保障厅、省教育厅。
+
+（二）承办单位：省人才交流中心、省就业服务管理局、省高校毕业生就业指导中心、省人力资源服务行业协
+会、西南民族大学、四川师范大学、四川建筑职业技术学院、西南科技大学、成都信息工程大学。
+
+（三）协办单位：各市（州）人社部门、各高校。
+
+（四）技术支持：四川省人才网（www.scrc168.com）、四川省公共招聘网（www.sc91.org.cn）、成都
+、人才网（www.rc114.com）。
+
+三、服务对象
+
+（一）2017年应届高校毕业生；
+
+（二）往届有就业创业意愿的离校未就业高校毕业生；
+
+（三）“三支一扶”等基层项目服务期满未就业高校毕业生；
+
+（四）高校毕业生中的困难群体。
+
+四、活动安排
+
+（一）举办现场招聘大会。
+
+    1.西南民族大学公共招聘会。举办时间：2016年11月5日。举办地点：西南民族大学武侯校区体育馆。
+    地址：成都市一环路南四段16号。
+
+    2.2016年全国人力资源市场高校毕业生就业服务周四川省人才招聘大会。举办时间：2016年11月26日。
+    举办地点:四川师范大学狮子山校区第一运动场。地址：成都市锦江区静安路5号。
+
+    3.四川建筑职业技术学院公共招聘会。举办时间:2016年12月17日。举办地点：四川省建筑职业技术学
+     院德阳校区风雨操场。地址：四川省德阳市嘉陵江西路4号。
+
+    4.西南科技大学和成都信息工程大学公共招聘会将于2017年春季举办，具体时间和地点另行通知。
+
+    5.活动期间，市（州）还可以在本地区组织开展“公共招聘进校园”现场招聘会。
+
+（二）举办网络招聘大会。
+
+    2016年11月5日至12月5日，四川省人才网、四川省公共招聘网、成都人才网等网站将开辟“公共招聘进校园”
+专栏，统一发布全省高校毕业生招聘信息，举办秋季网络招聘大会。2017年春季网络招聘大会举办时间另行通知。
+
+（三）开展职业生涯规划讲座、职业能力测评等活动。
+
+    公共招聘会举办期间，省人才交流中心将邀请知名企业人力资源经理或有关专家，到承办招聘会的高校开展职业
+生涯规划讲座和组织免费的职业能力测评，帮助大学生转变就业观念，提升就业技巧和能力。同时，省就业局还将在
+省公共招聘网上为大学生提供免费的创业能力测试。
+
+
+省人才交流中心 陈守强 彭维锋
+
+联系电话：028-86127052 028-86139021 QQ：34221694
+
+省高校毕业生就业指导中心 朱丹
+
+联系电话：028-86125137
+
+
+
+
+                </pre>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer class="mt-5">
+    <div class="footer-wrap theme-bg pb-45 pt-95">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 col-md-12 col-sm-6">
+                    <div class="footer-widget mb-50">
+                        <div class="fw-title mb-30">
+                            <h3>About us</h3>
+                        </div>
+                        <div class="footer-trext mb-25">
+                            <p>Lorem ipsum dummy text are usually
+                                use in the print and website das.</p>
+                        </div>
+                        <div class="footer-contact">
+                            <ul>
+                                <li>
+                                    <i class="icon_phone"></i>
+                                    <span>+387 64 8459 254 68</span>
+                                </li>
+                                <li>
+                                    <i class="icon_mail_alt"></i>
+                                    <span>info.manager@gmail.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="footer-widget mb-50">
+                        <div class="fw-title mb-30">
+                            <h3>Recommend</h3>
+                        </div>
+                        <div class="fw-link">
+                            <ul>
+                                <li><a href="#">Digital marketing</a></li>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">Pay per click</a></li>
+                                <li><a href="#">Wordpress</a></li>
+                                <li><a href="#">Socaial media</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="footer-widget mb-50">
+                        <div class="fw-title mb-30">
+                            <h3>Quick links</h3>
+                        </div>
+                        <div class="fw-link">
+                            <ul>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Lorem ispum</a></li>
+                                <li><a href="#">Dummy content</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="footer-widget pl-40 mb-50">
+                        <div class="fw-title mb-30">
+                            <h3>Support or policy</h3>
+                        </div>
+                        <div class="fw-link">
+                            <ul>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">Language packs</a></li>
+                                <li><a href="#">Release Status</a></li>
+                                <li><a href="#">Lorem ipsum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area" style="align-content: center">
+        <div class="container">
+            <div class="align-content-center">
+                <div class="copyright-text text-center text-md-center">
+                    <p>Copyright &copy; 2019.GroupTen All rights reserved.</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer-end -->
+
+
+
+
+<!-- JS here -->
+<script src="../static/js/vendor/jquery-1.12.4.min.js" th:src="@{/js/vendor/jquery-1.12.4.min.js}"></script>
+<script src="../static/js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
+<script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script src="../static/js/ajax-form.js" th:src="@{/js/ajax-form.js}"></script>
+<script src="../static/js/jquery.scrollUp.min.js" th:src="@{/js/jquery.scrollUp.min.js}"></script>
+<script src="../static/js/jquery.magnific-popup.min.js" th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+<script src="../static/js/plugins.js" th:src="@{/js/plugins.js}"></script>
+<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+</body>
+</html>
+

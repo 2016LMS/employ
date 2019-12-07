@@ -1,0 +1,228 @@
+﻿<!doctype html>
+<html class="no-js" lang="en" xmlns:th="http://thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>就业政策列表</title>
+        <meta name="description" content="graduates">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" type="image/x-icon" href="../static/img/logo/graduate.svg" th:href="@{/img/graduate.svg}">
+        <!-- Place favicon.ico in the root directory -->
+        <!-- CSS here -->
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+        <link rel="stylesheet" href="../static/css/animate.min.css" th:href="@{/css/animate.min.css}">
+        <link rel="stylesheet" href="../static/css/elegant-icon.css" th:href="@{/css/elegant-icon.css}">
+        <link rel="stylesheet" href="../static/css/flaticon.css" th:href="@{/css/flaticon.css}">
+        <link rel="stylesheet" href="../static/css/default.css" th:href="@{/css/default.css}">
+        <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <body>
+
+        <!-- preloader -->
+        <div id="preloader">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- preloader end  -->
+
+        <!-- header -->
+        <header>
+            <div class="header-top d-none d-md-block">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="header-contact text-center text-lg-left">
+                                <ul>
+                                    <li><i class="icon_phone"></i> +111 2222 444</li>
+                                    <li><i class="icon_mail_alt"></i> example@gmail.com</li>
+                                    <li><i class="icon_pin_alt"></i> ChengDu University CHN</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--<div class="col-lg-4 d-none d-lg-block">-->
+                            <!--<div class="header-contact" style="color: white" th:text="${session.user.name}">-->
+                                <!--<span>未登录</span>-->
+                                <!--<span th:if="${session.user.name}"><i class="icon_cursor"></i>退出</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+            <div id="header-sticky" class="menu-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <div class="m-3">
+                                <div class="col-md-6 text-md-center p-2" style="background:#13404d;border-radius: 6px;color: white">
+                                    <img src="../static/img/logo/graduate2.svg" alt="Logo" style="width: 30px;" th:src="@{/img/logo/graduate2.svg}">
+                                    毕业生管理
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="main-menu text-right">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="index_graduate.html" th:href="@{/index_gra}">Home</a></li>
+                                        <li><a href="../static/about.html">About Us</a></li>
+                                        <li><a href="../static/about.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <hr>
+
+        <!--中间内容-->
+        <div class="container mb-3">
+            <div class="m-3">
+                <div class="col-md-2 text-md-center p-1 border-bottom" style="font-size: 30px">就业政策汇总</div>
+            </div>
+
+            <img src="../static/img/bg/10.jpg" style="height: 60%;margin-bottom:50px;border-radius: 5px" th:src="@{/img/bg/10.jpg}">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>标题</th>
+                        <th>日期</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="po:${pos}">
+                        <td th:text="${po.poli_id}">1</td>
+                        <td><a th:href="@{'/policy_detail?poli_id='+${po.poli_id}}" target="_blank" th:text="${po.title}">四川省教育厅关于联合开展公共招聘进校园活动的通知</a></td>
+                        <td th:text="${po.poli_post_time}">2019/10/14</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-wrap theme-bg pb-45 pt-95">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-12 col-sm-6">
+                            <div class="footer-widget mb-50">
+                                <div class="fw-title mb-30">
+                                    <h3>About us</h3>
+                                </div>
+                                <div class="footer-trext mb-25">
+                                    <p>Lorem ipsum dummy text are usually
+                                    use in the print and website das.</p>
+                                </div>
+                                <div class="footer-contact">
+                                    <ul>
+                                        <li>
+                                            <i class="icon_phone"></i>
+                                            <span>+387 64 8459 254 68</span>
+                                        </li>
+                                        <li>
+                                            <i class="icon_mail_alt"></i>
+                                            <span>info.manager@gmail.com</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer-widget mb-50">
+                                <div class="fw-title mb-30">
+                                    <h3>Recommend</h3>
+                                </div>
+                                <div class="fw-link">
+                                    <ul>
+                                        <li><a href="#">Digital marketing</a></li>
+                                        <li><a href="#">SEO</a></li>
+                                        <li><a href="#">Pay per click</a></li>
+                                        <li><a href="#">Wordpress</a></li>
+                                        <li><a href="#">Socaial media</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer-widget mb-50">
+                                <div class="fw-title mb-30">
+                                    <h3>Quick links</h3>
+                                </div>
+                                <div class="fw-link">
+                                    <ul>
+                                        <li><a href="#">Privacy policy</a></li>
+                                        <li><a href="#">Contact us</a></li>
+                                        <li><a href="#">Lorem ispum</a></li>
+                                        <li><a href="#">Dummy content</a></li>
+                                        <li><a href="#">Privacy policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-4 col-sm-6">
+                            <div class="footer-widget pl-40 mb-50">
+                                <div class="fw-title mb-30">
+                                    <h3>Support or policy</h3>
+                                </div>
+                                <div class="fw-link">
+                                    <ul>
+                                        <li><a href="#">Documentation</a></li>
+                                        <li><a href="#">Forums</a></li>
+                                        <li><a href="#">Language packs</a></li>
+                                        <li><a href="#">Release Status</a></li>
+                                        <li><a href="#">Lorem ipsum</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="copyright-text text-center text-md-left">
+                                <p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-none d-md-block">
+                            <div class="copyright-link text-right">
+                                <ul>
+                                    <li><a href="#">Lorem</a></li>
+                                    <li><a href="#">dummy</a></li>
+                                    <li><a href="#">Lorem</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-end -->
+
+
+
+
+		<!-- JS here -->
+        <script src="../static/js/vendor/jquery-1.12.4.min.js" th:src="@{/js/vendor/jquery-1.12.4.min.js}"></script>
+        <script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+        <script src="../static/js/ajax-form.js" th:src="@{/js/ajax-form.js}"></script>
+        <script src="../static/js/jquery.scrollUp.min.js" th:src="@{/js/jquery.scrollUp.min.js}"></script>
+        <script src="../static/js/jquery.magnific-popup.min.js" th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+        <script src="../static/js/plugins.js" th:src="@{/js/plugins.js}"></script>
+        <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    </body>
+</html>
+

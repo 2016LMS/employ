@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>数据测试</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+<form action="" method="get">
+    <label>内容输入：</label>
+    <textarea name="DIVCSS5" cols="30" rows="4">
+        www.DIVCSS5.com-网页制作教程
+    </textarea>
+</form>
+<div class="container">
+    <p>富贵曾过着风流公子似的生活，吃喝嫖赌，但也终于付出了代价，落得一个家徒四壁的下场。在贫穷困境的挤压下，富贵终于明白了亲情的温暖，却又不得不面对冰冷的死亡：儿子在众人暴虐的贪婪及趋炎附势的狞笑压迫下的死亡，母亲被枯萎的岁月硬生生托来的死亡，父亲在田间那一头长叹一声后终于落下的死亡，女儿在迎接新生命的那个本该充满希望的日子里的无情死亡，妻子在撕心裂肺的心灵之痛与损人形体的病痛的双重折磨下的死亡，女婿在工厂做工时毫无预兆的意外死亡。最后富贵已脊背佝偻，面容枯槁，原本这辈子已别无所求，但还是迎来了最后一个亲人的死亡——孙子苦根那被贫穷扼住的荒谬死亡。
+
+        生命里难得的温情被一次次死亡撕扯得粉碎，只剩下苍老的富贵牵着一头老牛在阳光下回忆。这是富贵的平凡又离奇的一生。
+
+        这种命运的折磨用狡心来形容是远远不足的，但富贵在诉说往事时却波澜不惊，他的眼睛里是落山太阳的夕晖。
+
+        小说中说“他是那种能看到自己过去模样的人，他可以准确作文http://Www.zUoWEn8.coM/看到自己年轻时走路的姿态，甚至可以看到自己是如何衰老的。”只有富贵还活着，扛住一切重压活着，让我们看到了活着的坚忍，活着的力量。
+
+        余华在序言里写道：“活着在我们中国的语言里充满了力量，它的力量不是来自于喊叫，也不是来自于进攻，而是忍受，去忍受生命赋予我们的责任，去忍受现实给予我们的幸福和苦难，无聊和平庸。”确实，活着的目的就在于活着，它是一种重量，更是一种力量，它看见了活着之于生命本身的庄严，不被失败撂倒，不被痛苦打垮，不畏过去，珍惜当下，在岁月的磨砺下蜕变，在泪水的洗涤中重新开始。依然坚定的活着，是对生命无可限量的勇气，是历经苦难的证明。
+
+        然而，我们素有苟延残喘，苟且偷生的说法。曾犯过大错，生活拮据，又没有亲人的富贵是不是能算传统意义上的苟活！除此之外，我们也有项羽在兵败垓下后乌江畔尖刀刎颈而死，死得何其壮烈？文震亨在国破家亡时投河寻死不成又绝食而亡，死得何其赤诚？谁不羡慕这样一场放纵的迷醉，他们死成了烈士，死成了英雄，可与平凡人富贵相比，他们却少了些承重的勇毅与担当，在人生这趟列车上，谁不知道最终的结局都是尘埃为伴，有人以“不苟活”作为漂亮的借口，把旅途的沉重抛向脑后，提前下手。而富贵呢，他不知道旅途还剩多长，却也明白了时日不多，前路黄沙漫天，孤独重重，他一直稳坐在车上，经过一个又一个生活为他准备的驿站。
+
+        所以，当富贵牵着那头最后与他相伴叫做富贵的老牛时，他的口中才能飘来轻快的声音：“富贵呀，你要好好干活啊。”</p>
+</div>
+<p th:if="3 > 2">if中是true才显示</p>
+<table>
+    <tr th:each="re:${res}">
+        <td th:text="${re.rec_id}"></td>
+        <td th:text="${re.rec_title}"></td>
+        <td th:text="${re.rec_img}"></td>
+        <td th:text="${re.rec_text}"></td>
+        <td th:text="${re.rec_post_time}"></td>
+    </tr>
+</table>
+<!--<a th:href="@{'/admin?id='+${re.recruit_id}"></a>-->
+    <div class="container">
+        <h2>表格</h2>
+        <p> .table 为任意表格添加基本样式 (只有横向分隔线):</p>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Firstname</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Anna</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Debbie</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>John</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+<form action="#" role="form">
+    <div class="form-group">
+        <label >名称：</label>
+        <input class="form-control" type="text" placeholder="输入姓名">
+        <input class="form-control" placeholder="dsa">
+    </div>
+    <div class="form-group">
+        <label class="form-check-label">检查</label>
+        <input class="form-control">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox">请打勾
+            </label>
+        </div>
+        <button class="btn btn-outline-primary" type="submit">请确认</button>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+
+        <ul class="navbar-nav">
+            <li class="nav-item  border-right ">
+                <a class=" nav-link" href="#">Link 1</a>
+            </li>
+            <li class="nav-item active border-right">
+                <a class="nav-link" href="#">Link 2</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </nav>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+
+
+    <table class="table table-active">
+        <tr>
+            <th>标题</th>
+            <th>内容</th>
+        </tr>
+
+        <tr>
+            <td>阿里面经</td>
+            <td>面试经验内容</td>
+        </tr>
+
+        <tr>
+            <td>阿里面经</td>
+            <td>面试经验内容</td>
+        </tr>
+    </table>
+
+    <ul class="list-group-item-action">
+        <li><a href="#" style="color: orange">asd</a></li>
+        <li><a href="#" style="color: orange">asd</a></li>
+        <li><a href="#" style="color: orange">asd</a></li>
+        <li><a href="#" style="color: orange">asd</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="col-md-6" style="background: #ff6464">asdas</div>
+        <div class="col-md-4" style="background: #4e555b">asdasd</div>
+    </div>
+
+    <br>
+    <br>
+</form>
+</body>
+</html>

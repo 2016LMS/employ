@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.groupten.employ.dao.RootDao">
+    <select id="authenticateRoot" resultType="java.lang.String">
+        select role from root where root_username=#{root_username} and password=#{root_password}
+    </select>
+</mapper>
